@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Application Flask Portuguese Marketing Campaign</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+  <title>Accueil</title>
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+  <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/"><b>Portuguese Marketing Campaign</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <!--    <form class="form-inline my-2 my-lg-0" method="POST" action="/predict">
+      <input class="form-control mr-sm-2" type="text" name="namequery" placeholder="" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Predict</button>
+    </form> -->
+    </div>
+  </nav>
+  <br />
+  <br />
+  <!-- blue #0686e4 
+<div class="jumbotron" style="background:blue;color:#fff">
+    <div class="container">
+      <h2 class="display-3"><b>Liver Cancer Mortality Prediction</b></h2>
+      <p>Using Machine Learning </p>
+      <p><a class="btn btn-success waves-effect btn-lg" href="/" role="button">Refresh &raquo;</a></p>
+    </div>
+  </div>-->
+  <div class="dh ">
+    <img class="dh" src="{{ url_for('static', filename='dat.jpg') }}" alt="Kolkata Knight Riders">
+    <br><br>
+
+    <br><br>
+    <center>
+      <h2 class="rainbow">Simulation d'une souscription d'un Dépôt à Terme</h2>
+    </center>
+    <br>
+    <div class="container">
+      <form method="POST" action="/predict">
+        <!-- Clean Layout -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="card mb-10 shadow-sm" id="custom_card">
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="age">&nbsp;&nbsp;<b>Age</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="age" name="age" min=7 value="7"
+                    id="ip4">
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="balance">&nbsp;&nbsp;<b>Balance</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="balance" name="balance" min=0 value="0"
+                    id="ip4">
+                </div>
+                <div class="form-group">
+                  <label for="day">&nbsp;&nbsp;<b>Day</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="day" name="day" min=1 value="1" id="ip4"
+                    max="31">
+                </div>
+                <div class="form-group">
+                  <label for="duration">&nbsp;&nbsp;<b>Duration</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="duration" name="duration" min=0
+                    value="0" id="ip4">
+                </div>
+                <div class="form-group">
+                  <label for="campaign">&nbsp;&nbsp;<b>Campaign</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="campaign" name="campaign" min=1
+                    value="1" id="ip4">
+                </div>
+                <div class="form-group">
+                  <label for="pdays">&nbsp;&nbsp;<b>Pdays</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="pdays" name="pdays" min=-1 value="-1"
+                    id="ip4">
+                </div>
+                <div class="form-group">
+                  <label for="previous">&nbsp;&nbsp;<b>Previous</b>:</label>
+                  <input type="number" class="form-control form-control-sm" id="previous" name="previous" min=-1
+                    value="-1" id="ip4">
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <h6>&nbsp;&nbsp;<b>Has credit in default ?</b></h6>
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="default" value="0" checked="checked">No
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="default" value="1">Yes
+                    </label>
+                  </div>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <h6>&nbsp;&nbsp;<b>Has housing loan ?</b></h6>
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="housing_loan" value="0" checked="checked">No
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="housing_loan" value="1">Yes
+                    </label>
+                  </div>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <h6>&nbsp;&nbsp;<b>Has personal loan ?</b></h6>
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="personal_loan" value="0" checked="checked">No
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="personal_loan" value="1">Yes
+                    </label>
+                  </div>
+                </div>
+                <!-- Feature Ends here -->
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card mb-10 shadow-sm" id="custom_card2">
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="bilirubin">&nbsp;&nbsp;<b>Type of job ?</b></label>
+                  <select class="form-control" id="job" name='job'>
+                    <option value="1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0">blue-collar</option>
+                    <option value="0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0">entrepreneur</option>
+                    <option value="0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0">housemaid</option>
+                    <option value="0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0">management</option>
+                    <option value="0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0">retired</option>
+                    <option value="0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0">self-employed</option>
+                    <option value="0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0">services</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0">student</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0">technician</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0">unemployed</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1">unknown</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="alk_phosphate">&nbsp;&nbsp;<b>Marital status ?</b></label>
+                  <select class="form-control" id="marital" name='marital'>
+                    <option value="1, 0">married</option>
+                    <option value="0, 1">single</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="sgot">&nbsp;&nbsp;<b>Education ?</b></label>
+                  <select class="form-control" id="education" name='education'>
+                    <option value="1, 0, 0">secondary</option>
+                    <option value="0, 1, 0">tertiary</option>
+                    <option value="0, 0, 1">unknown</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="sgot">&nbsp;&nbsp;<b>Contact ?</b></label>
+                  <select class="form-control" id="contact_type" name='contact_type'>
+                    <option value="1, 0">telephone</option>
+                    <option value="0, 1">unknown</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="albumin">&nbsp;&nbsp;<b>Last contact month of year ?</b></label>
+                  <select class="form-control" id="month" name='month'>
+                    <option value="1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0">jan</option>
+                    <option value="0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0">feb</option>
+                    <option value="0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0">mar</option>
+                    <option value="0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0">may</option>
+                    <option value="0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0">jun</option>
+                    <option value="0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0">jul</option>
+                    <option value="0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0">aug</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0">sep</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0">oct</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0">nov</option>
+                    <option value="0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1">dec</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+                <!-- Feature Starts here -->
+                <div class="form-group">
+                  <label for="protime">&nbsp;&nbsp;<b>Poutcome of the previous marketing campaign
+                      ?</b></label>
+                  <select class="form-control" id="poutcome" name='poutcome'>
+                    <option value="1, 0, 0">other</option>
+                    <option value="0, 1, 0">success</option>
+                    <option value="0, 0, 1">unknown</option>
+                  </select>
+                </div>
+                <!-- Feature Ends here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Clean Layout ends here -->
+        <button type="reset" class="btn btn-outline-success">Reset</button>
+        <button type="submit" class="btn btn-primary">Predict</button>
+        <a class="btn btn-success" href="/" role="button">Refresh &raquo;</a>
+      </form>
+    </div>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-10 shadow-sm" id="custom_card">
+            <h4>Result</h4>
+            <h6>Original Data</h6>
+            <pre>{{ sample_result }}</pre>
+            <br />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-10 shadow-sm" id="custom_card2" style="background-color:blue; color:white;padding:5px">
+            <h4>Prediction</h4>
+            <div class="alert alert-primary" role="alert">
+              {{ prediction }}
+            </div>
+            <hr />
+            <h6>Probability Score</h6>
+            <p>{{ pred_probalility_score }}</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div class='footer'>
+      <div class="footer">
+        <div>
+          </a>
+          <p>
+            <font face='verdana' size='2'><b>@ 2020 All Rights Reserved. <a
+                  href="https://www.linkedin.com/in/audrey-fougere-3768b464/"><button type="button"
+                    class="btn-linkedin w3-blue"><i class="fa fa-linkedin left"></i></button></a>&nbsp<a
+                  href="https://github.com/fougere44"><button type="button" class="btn-github w3-white"><i
+                      class="fa fa-github left"></i></button></a>&nbsp<a href="/"><button type="button"
+                    class="btn-whatsapp w3-green"><i class="fa fa-whatsapp my-float left"></i></button> </b></font>
+          </p>
+        </div>
+      </div>
+      <!-- JQuery -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
+</body>
+
+</html>
