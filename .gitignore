@@ -6,3 +6,5 @@ __pycache__/
 bank_env/
 
 .vscode
+
+.ipynb_checkpoints
