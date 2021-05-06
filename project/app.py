@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, render_template, url_for, jsonify
 import pickle
 import os
 import ast
+import sklearn
 
 app = Flask(__name__)
 #model = pickle.load(open('./models/grid_logreg_A.pkl', 'rb'))
@@ -98,28 +99,34 @@ def predict():
 
 
         l_total = liste_job + liste_marital + liste_education + liste_contact + liste_month + liste_poutcome
-
-        assert type(l_total) == list
+        assert type(l_total) is list
 
         num_data = [age, balance, day, duration, campaign, pdays, previous, default, housing_loan, personal_loan]
-        
+        assert type(num_data) is list
+
         num_total = num_data + l_total
-        
+        assert type(num_total) is list
+
         numerical_encoded_data = [int(x) for x in num_total]
-        print(numerical_encoded_data)
+        assert 42 == len(numerical_encoded_data)
         
         model = load_model('models/log_reg_model_v2.pkl')
-        prediction = model.predict(
-            np.array(numerical_encoded_data).reshape(1, -1))
-        print(prediction)
-        prediction_label = {"Positive Predict": 1, "Negative predict": 0}
-        final_result = get_key(prediction[0], prediction_label)
-        pred_prob = model.predict_proba(
-            np.array(numerical_encoded_data).reshape(1, -1))
-        pred_probalility_score = {
-            "DAT Positive": pred_prob.round(2)[0][1]*100, "DAT Negative": pred_prob.round(2)[0][0]*100}
+        assert type(model) is sklearn.model_selection._search.GridSearchCV
+        
+        prediction = model.predict(np.array(numerical_encoded_data).reshape(1, -1))
+        assert type(prediction) is np.ndarray
 
-    return render_template("index.html" ,sample_result=sample_result,prediction=final_result,pred_probalility_score=pred_probalility_score)
+        
+        prediction_label = {"Positive Predict": 1, "Negative Predict": 0}
+        final_result = get_key(prediction[0], prediction_label)
+        assert type(final_result) is str
+
+
+        pred_prob = model.predict_proba(np.array(numerical_encoded_data).reshape(1, -1))
+        pred_probalility_score = {"DAT Positive": pred_prob.round(2)[0][1] * 100, "DAT Negative": pred_prob.round(2)[0][0] * 100}
+            
+
+    return render_template("index.html", sample_result=sample_result, prediction=final_result, pred_probalility_score=pred_probalility_score)
 
 
 if __name__ == "__main__":
