@@ -1,13 +1,11 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template, url_for, jsonify
+from flask import Flask, request, render_template, url_for
 import pickle
 import os
 import ast
 import sklearn
 
 app = Flask(__name__)
-#model = pickle.load(open('./models/grid_logreg_A.pkl', 'rb'))
-
 
 def load_model(model_file):
     loaded_model = pickle.load(open(os.path.join(model_file), "rb"))
@@ -45,8 +43,7 @@ def predict():
         month = request.form['month']
         poutcome = request.form['poutcome']
 
-        sample_result = {"age": age, "balance": balance, "day": day, "duration": duration, "campaign": campaign, "pdays": pdays, "previous": previous, "default": default,
-                         "housing_loan": housing_loan, "personal_loan": personal_loan, "job": job, "marital": marital, "education": education, "contact_type": contact_type, "month": month, "poutcome": poutcome}
+        sample_result = {"age": age, "balance": balance, "day": day, "duration": duration, "campaign": campaign, "pdays": pdays, "previous": previous, "default": default, "housing_loan": housing_loan, "personal_loan": personal_loan, "job": job, "marital": marital, "education": education, "contact_type": contact_type, "month": month, "poutcome": poutcome}
 
 
 
@@ -110,7 +107,7 @@ def predict():
         numerical_encoded_data = [int(x) for x in num_total]
         assert 42 == len(numerical_encoded_data)
         
-        model = load_model('models/log_reg_model_v2.pkl')
+        model = load_model('models/bank_model.pkl')
         assert type(model) is sklearn.model_selection._search.GridSearchCV
         
         prediction = model.predict(np.array(numerical_encoded_data).reshape(1, -1))
