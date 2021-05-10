@@ -99,7 +99,7 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
 9. Amusez-vous !
 
 
-
+![alt text](https://i.ibb.co/3SPNGv8/flask-app.png)
 
 
 
@@ -110,6 +110,6 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
 
 ## Langages 
 
-Jupyter notebooks / Python / HTML5, CSS3
+Jupyter notebooks / Python / HTML5 / CSS3
 
 
