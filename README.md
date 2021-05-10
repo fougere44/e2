@@ -3,3 +3,10 @@ Ce répertoire vise à analyser des données de marketing en banque autour de la
 
 Le jeu de données utilisé est issu du site UCI: https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
+
+
+# Langages utilisés ?
+
+Python
+HTML5, CSS3, Javascript 
+
