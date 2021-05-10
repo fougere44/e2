@@ -52,8 +52,6 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
     jupyter lab
     ```
 
-# Langages utilisés ?
+## Langages 
 
-Python
-HTML5, CSS3, Javascript 
-
+Jupyter notebooks / Python / HTML5, CSS3
