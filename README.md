@@ -74,34 +74,29 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
 
 5. Activez l'environnement virtuel "bank_env" :
     ```
-    cd bank_env/Scripts
+    cd env/Scripts
     activate
     ```
     
-6. Installer les librairies :
-    ```
-    pip install -r requirements.txt
-    ```
-
-7. Retourner dans le dossier "projet" :
+6. Retourner dans le dossier "projet" :
     ```
     cd /
     cd C:\...\project
     ```
 
-8. Définir les variables de l'application Flask :
+7. Définir les variables de l'application Flask :
     ```
     set FLASK_APP=app
     set FLASK_ENV=development
     flask run
     ```
 
-9. Faire un ctrl + click à cette adresse : 
+8. Faire un ctrl + click à cette adresse : 
     ```
     http://127.0.0.1:5000/
     ```
 
-10. Amusez-vous !
+9. Amusez-vous !
 
 
 
