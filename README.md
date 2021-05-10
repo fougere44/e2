@@ -52,6 +52,67 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
     jupyter lab
     ```
 
+
+## Lancer l'application Flask sur le port http://127.0.0.1:5000/ avec Visual Studio Code
+
+1. Installez l'environnement de développement Visual Studio Code sur votre machine (https://code.visualstudio.com/)
+
+2. Clonez le dépôt :
+    ```
+    git clone https://github.com/fougere44/e2.git
+    ```
+
+3. Déplacez-vous dans le répertoire du dépôt :
+    ```
+    cd e2/project
+    ```
+
+4. Lancer le projet sous Visual Studio Code avec le raccourci "code ."
+   ```
+    C:\Users\...\project\code .
+    ```
+
+5. Activez l'environnement virtuel "bank_env" :
+    ```
+    cd bank_env/Scripts
+    activate
+    ```
+    
+6. Installer les librairies :
+    ```
+    pip install -r requirements.txt
+    ```
+
+7. Retourner dans le dossier "projet" :
+    ```
+    cd /
+    cd C:\...\project
+    ```
+
+8. Définir les variables de l'application Flask :
+    ```
+    set FLASK_APP=app
+    set FLASK_ENV=development
+    flask run
+    ```
+
+9. Faire un ctrl + click à cette adresse : 
+    ```
+    http://127.0.0.1:5000/
+    ```
+
+10. Amusez-vous !
+
+
+
+
+
+
+
+
+
+
+
 ## Langages 
 
 Jupyter notebooks / Python / HTML5, CSS3
