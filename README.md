@@ -18,12 +18,12 @@ Le fichier csv utilisé pour faire ces analyses est le suivant: bank-full.csv
     cd e2/project
     ```
 
-4. Créez l'environnement python :
+4. Créez l'environnement virtuel python :
     ```
     python -m venv env
     ```
 
-5. Activez l'environnement conda :
+5. Activez l'environnement virtuel "env" :
     ```
     cd env/Scripts
     activate
